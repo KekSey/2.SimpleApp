@@ -18,7 +18,8 @@ public class PreviewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_preview);
 
         textPreview = findViewById(R.id.text_view_preview);
-        textPreview.setText(getIntent().getStringExtra("KEY_TEXT_PREVIEW"));
+        //textPreview.setText(getIntent().getStringExtra("KEY_TEXT_PREVIEW"));
+        textPreview.setText(getIntent().getStringExtra("KEY_MSG_RECEPIENT"));
 
         Button btnSend = findViewById(R.id.button_send);
         btnSend.setOnClickListener(new View.OnClickListener() {
@@ -36,23 +37,31 @@ public class PreviewActivity extends AppCompatActivity {
         activity.startActivity(intent);
     }
 
+    public static void msgInfoView(Activity activity, String[] msgInfo) {
+        Intent intent = new Intent(activity, PreviewActivity.class);
+        intent.putExtra("KEY_MSG_RECEPIENT", msgInfo[0]);
+        intent.putExtra("KEY_MSG_SUBJECT", msgInfo[1]);
+        intent.putExtra("KEY_MSG", msgInfo[2]);
+        activity.startActivity(intent);
+    }
+
     //Объявление метода sendViaEmail()
     private void sendViaEmail() {
-        MainActivity preview = new MainActivity();
+        //MainActivity preview = new MainActivity();
 
-        String recepient = preview.getTextEmail();
-        String subject = preview.getTextSubject();
-        String msg = preview.getTextMsg();
+        String recepient = getIntent().getStringExtra("KEY_MSG_RECEPIENT");
+        String subject = getIntent().getStringExtra("KEY_MSG_SUBJECT");
+        String msg = getIntent().getStringExtra("KEY_MSG");
 
-        /*Intent intent = new Intent(Intent.ACTION_SEND);
+        Intent intent = new Intent(Intent.ACTION_SEND);
 
         intent.putExtra(Intent.EXTRA_EMAIL, recepient);
         intent.putExtra(Intent.EXTRA_SUBJECT, subject);
         intent.putExtra(Intent.EXTRA_TEXT, msg);
 
         intent.setType("message/rfc822");
-        startActivity(intent.createChooser(intent, "Choose an e-mail client"));*/
+        startActivity(intent.createChooser(intent, "Choose an e-mail client"));
 
-        textPreview.setText(recepient);
+        //textPreview.setText(subject);
     }
 }

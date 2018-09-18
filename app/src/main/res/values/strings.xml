@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">2.SimpleApp</string>
+
+    <string name="email_address">E-mail address:</string>
+    <string name="email_address_hint">Enter recipient\'s e-mail here</string>
+    <string name="email_subject">Subject:</string>
+    <string name="email_subject_hint">Enter subject name here</string>
+    <string name="email_text">Text message:</string>
+    <string name="email_text_hint">Type your message here ...</string>
+
+    <string name="btn_preview">Preview</string>
+    <string name="btn_send_via_email">Send via email</string>
+
+    <string name="empty_email_field">Empty e-mail field</string>
+    <string name="empty_subject_field">Empty subject field</string>
+    <string name="empty_msg_field">Empty message field</string>
 </resources>

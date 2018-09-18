@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">2.SimpleApp</string>
+
+    <string name="email_address">Электронная почта:</string>
+    <string name="email_address_hint">Введите адресс эл. почты получателя</string>
+    <string name="email_subject">Тема:</string>
+    <string name="email_subject_hint">Введите тему вашего сообщения</string>
+    <string name="email_text">Сообщение:</string>
+    <string name="email_text_hint">Введите ваше текстовое сообщение ...</string>
+
+    <string name="btn_preview">Просмотр</string>
+    <string name="btn_send_via_email">Отправить</string>
+
+    <string name="empty_email_field">Введите адресс эл. почты</string>
+    <string name="empty_subject_field">Введите тему сообщения</string>
+    <string name="empty_msg_field">Введите сообщение</string>
+</resources>

@@ -17,45 +17,45 @@
             android:id="@+id/text_view_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="E-mail address:" />
+            android:text="@string/email_address" />
 
         <EditText
             android:id="@+id/edit_text_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:hint="Enter recipient's e-mail here" />
+            android:hint="@string/email_address_hint" />
 
         <TextView
             android:id="@+id/text_view_subject"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Subject:" />
+            android:text="@string/email_subject" />
 
         <EditText
             android:id="@+id/edit_text_subject"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:hint="Enter subject name here" />
+            android:hint="@string/email_subject_hint" />
 
         <TextView
             android:id="@+id/text_view_msg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Text message:" />
+            android:text="@string/email_text" />
 
         <EditText
             android:id="@+id/edit_text_msg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:hint="Type your message here ..." />
+            android:hint="@string/email_text_hint" />
 
         <Button
             android:id="@+id/button_preview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Preview" />
+            android:text="@string/btn_preview" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="9"
-            android:text="Send via email" />
+            android:text="@string/btn_send_via_email" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

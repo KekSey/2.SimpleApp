@@ -30,11 +30,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (isEmpty(textEmail)) {
-                    Toast.makeText(MainActivity.this, "Empty e-mail field", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, getString(R.string.empty_email_field), Toast.LENGTH_SHORT).show();
                 } else if (isEmpty(textSubject)){
-                    Toast.makeText(MainActivity.this, "Empty subject field", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, getString(R.string.empty_subject_field), Toast.LENGTH_SHORT).show();
                 } else if (isEmpty(textMsg)) {
-                    Toast.makeText(MainActivity.this, "Empty message field", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, getString(R.string.empty_msg_field), Toast.LENGTH_SHORT).show();
                 } else {
                     emailInfoToPreview();
                     openPreviewActivity();

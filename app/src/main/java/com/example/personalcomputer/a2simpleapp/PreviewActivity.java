@@ -47,12 +47,12 @@ public class PreviewActivity extends AppCompatActivity {
     //Объявление метода sendViaEmail()
     private void sendViaEmail() {
         String recepient = getIntent().getStringExtra("KEY_MSG_RECEPIENT");
-        String subject = getIntent().getStringExtra("KEY_MSG_SUBJECT");
+        String subject = getIntent().getStringExtra("KEY_TEXT_PREVIEW");
         String msg = getIntent().getStringExtra("KEY_MSG");
 
         Intent sendIntent = new Intent(Intent.ACTION_SEND);
 
-        sendIntent.putExtra(Intent.EXTRA_EMAIL, recepient);
+        sendIntent.putExtra(Intent.EXTRA_EMAIL, new String[] {recepient});
         sendIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
         sendIntent.putExtra(Intent.EXTRA_TEXT, msg);
 

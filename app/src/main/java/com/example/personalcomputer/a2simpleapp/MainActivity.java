@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
                 } else if (isEmpty(textMsg)) {
                     Toast.makeText(MainActivity.this, getString(R.string.empty_msg_field), Toast.LENGTH_SHORT).show();
                 } else {
-                    emailInfoToPreview();
                     openPreviewActivity();
                 }
             }
@@ -55,7 +54,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void emailInfoToPreview() {
-        PreviewActivity.emailInfoView(this, textEmail.getText().toString(), textSubject.getText().toString(), textMsg.getText().toString()); //Возникновение ошибки при использовании this (Found: 'anonymous.android.view.View.OnClickListener', required: 'android.app.Activity') [если распологать код в блоке метода .setOnClickListener()]
+        String text = textEmail.getText().toString();
+        String subject = textSubject.getText().toString();
+        String msg = textMsg.getText().toString();
+
+        PreviewActivity.emailInfoView(this, text, subject, msg); //Возникновение ошибки при использовании this (Found: 'anonymous.android.view.View.OnClickListener', required: 'android.app.Activity') [если распологать код в блоке метода .setOnClickListener()]
     }
 
     //Объявление метода isEmpty для проверки элементов EditText на отсутствие значений (возвращение boolean)
